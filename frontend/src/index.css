@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Modal Overlay Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1100; 
+}
+
+.modal-content button {
+  background-color: #0078d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #005cbf;
+}
+
+
+.temp-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;  
+  overflow: hidden;
+}
+
+.temp-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.temp-bg:hover:before {
+  opacity: 1; 
+} 
+
+/* .temp-bg:hover {
+
+  /* animation: pulse 1s ease-in-out infinite; */
+   /* animation: vibrate 0.3s linear infinite; */
+  /* animation: glitch 0.5s linear infinite; */
+  /* animation: blink 1s step-start infinite; */
+  /* animation: flicker 1s infinite alternate-reverse;  */
+.temp-bg:hover{
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+  0 0 20px rgba(255, 255, 255, 0.5),
+  0 0 30px rgba(255, 255, 255, 0.5);
+transition: text-shadow 0.2s ease-in-out;
+
+transform: scale(1.06);
+z-index: 2;
+
+}
+
+
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+@keyframes vibrate {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(4px, -4px);
+  }
+  50% {
+    transform: translate(-4px, 4px);
+  }
+  75% {
+    transform: translate(4px, 4px);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+.temp-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+
+
+.evil-bg{
+  background-image: url("./images/evilCastle.jpeg");
+}
+.archive-bg{
+  background-image: url("./images//archive.jpeg");
+}
+.howtoplay-bg{
+  background-image: url("./images/howToplay.jpeg");
+}

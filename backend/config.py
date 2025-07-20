@@ -1,0 +1,1 @@
+MONGO_URI = 'mongodb+srv://rachit:pyWizAdmin435@maindb.c6aaec6.mongodb.net/pywiz'
