@@ -1,7 +1,7 @@
 
 # make sure to install git, node, npm , latest python, only then follow these instructions  
   
-git clone https://github.com/rzx01/pywiz.git  
+git clone [https://github.com/shivi111104/pywiz.git]  
 cd pywiz/frontend  
 npm install   
 cd ../backend   
